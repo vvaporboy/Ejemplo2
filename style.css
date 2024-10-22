@@ -38,13 +38,13 @@ h2 {
     color: #202020;
     padding: 20px;
     margin-bottom: 50px; /* Espacio debajo del título */
-    text-align: left; /* Centrar texto */
+    text-align: center; /* Centrar texto */
 }
 h3 {
     color: #202020;
     padding: 20px;
     margin-bottom: 50px; /* Espacio debajo del título */
-    text-align: justify; /* Centrar texto */
+    text-align: center; /* Centrar texto */
 }
 /* Estilo para las etiquetas y entradas */
 label {
