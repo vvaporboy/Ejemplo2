@@ -11,23 +11,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Ingrese a nuestro sitio</title>
+    <title>Encargue una Impresión</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Registro</h1>
-        <!-- action="bienvenido.html" -->
+    <h1>Encargar una Impresión</h1>
+    <div class="container1">
+        <h2>Tipo de Impresión</h2>
+            <div> <!-- action="bienvenido.html" -->
         <form id="registration-form" onsubmit="redireccionar(event)">
-            <div>
-                <label for="email">Ingrese email:</label>
+                <label for="email">Adjuntar Archivo:</label>
                 <input type="email" id="email" >
             </div>
             <div>
-                <label for="password">Ingrese contraseña:</label>
+                <label for="password">Formato/Tamaño:</label>
                 <input type="password" id="password" >
             </div>
-            <button type="submit">Registrarse</button>
+            <label for="password">Tipo de Papel:</label>
+                <input type="password" id="password" >
+            </div>
+            <label for="password">Cantidad:</label>
+                <input type="password" id="password" >
         </form>
+    </div>
+    <div class="container2">
+        <h3>Datos de Envio</h3>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" >
+            </div>
+            <div>
+                <label for="password">Telefono:</label>
+                <input type="password" id="password" >
+            </div>
+            <label for="password">Domicilio:</label>
+                <input type="password" id="password" >
+            </div>
+            <label for="password">Codigo Postal:</label>
+                <input type="password" id="password" >
+        </form>
+        <button type="submit">Enviar</button>
     </div>
 </body>
 </html>
