@@ -19,20 +19,20 @@
         <h2>Tipo de Impresión</h2>
         <form id="registration-form" onsubmit="redireccionar(event)">
             <div> 
-                <label for="email">Adjuntar Archivo:</label>
-                <input type="email" id="email" >
+                <label for="Archivo">Adjuntar Archivo:</label>
+                <input type="file" id="Archivo" >
             </div>
             <div>
-                <label for="password">Formato/Tamaño:</label>
-                <input type="password" id="password" >
+                <label for="size">Formato/Tamaño:</label>
+                <input type="text" id="size" >
             </div>
             <div>
-            <label for="password">Tipo de Papel:</label>
-                <input type="password" id="password" >
+            <label for="Papel">Tipo de Papel:</label>
+                <input type="text" id="papel" >
             </div>
             <div>
-                <label for="password">Cantidad:</label>
-                <input type="password" id="password" >
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" >
             </div> 
         </form>
     </div>
@@ -43,16 +43,19 @@
                 <input type="email" id="email" >
             </div>
             <div>
-                <label for="password">Telefono:</label>
-                <input type="password" id="password" >
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" name="telefono">
             </div>
-            <label for="password">Domicilio:</label>
-                <input type="password" id="password" >
+            <div>
+            <label for="Domicilio">Domicilio:</label>
+                <input type="text" id="ubicacion" >
             </div>
-            <label for="password">Codigo Postal:</label>
-                <input type="password" id="password" >
+            <div>
+            <label for="codigopostal">Codigo Postal:</label>
+                <input type="text" id="codigopostal" >
+            </div>
         </form>
-        <button type="submit">Enviar</button>
     </div>
+    <button1 type="submit">Enviar</button>
 </body>
 </html>
