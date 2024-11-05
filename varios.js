@@ -13,7 +13,9 @@ function enviarDatos(event) {
 
     // valores del formulario
     const email = document.getElementById('email').value; //importante naturalizar sintaxis, se usa asi siempre para tomar elementos
-    const password = document.getElementById('password').value;
+    const size = document.getElementById('size').value;
+    const papel = document.getElementById('papel').value;
+    const archivo = document.getElementById('archivo').value;
 
     // objeto con los datos
     const data = { email, password };
@@ -22,5 +24,5 @@ function enviarDatos(event) {
     // respuesta exitosa
     console.log('Datos enviados correctamente'); // imprime en consola, se ve apretando f12 en el navegador y yendo a consola
     alert('Datos enviados correctamente para el email: ' + email); // Muestra msj en navegador 
-
+    window.location.href = 'nuevo.html';
     }
