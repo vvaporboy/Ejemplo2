@@ -1,7 +1,7 @@
 
 // funcion para escuchar un evento
 function iniciarFormulario() {
-    const form = document.getElementById('registro'); // toma el formulario por id
+    const form = document.getElementById('empezarencargue'); // toma el formulario por id
     if (form) {
         form.addEventListener('submit', enviarDatos); // asocia el evento 'submit' al formulario
     }
@@ -24,38 +24,3 @@ function enviarDatos(event) {
     alert('Datos enviados correctamente para el email: ' + email); // Muestra msj en navegador 
 
     }
-
- //DOCUMENTO JAVSCRIPT #2
-function enviarDatos2(event) {
-    event.preventDefault(); // Evitar el envío del formulario por defecto
-
-    // Obtener los valores del formulario
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    // Crear un objeto con los datos
-    const data = { email, password };
-    console.log(data);
-
-    // Enviar los datos al servidor
-    fetch('/logueo', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error en la solicitud');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Éxito:', data);
-        alert(data.message); // Mostrar mensaje de éxito
-    })
-    .catch(() => {
-        alert('Error al instanciar los datos');
-    });
-}
