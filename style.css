@@ -1,4 +1,3 @@
-/* Estilo general */
 body {
     font-family: Arial, sans-serif;
     background-color: #e9e9e9;
@@ -6,11 +5,10 @@ body {
     margin: 10;
     padding: 0;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
-    height: 100vh; /* Altura completa de la ventana */
+    height: 100vh;
 }
-/* Contenedor de la caja de inicio de sesión */
 .container1 {
     background-color: white;
     padding: 20px;
@@ -58,19 +56,18 @@ input {
     padding: 10px;
     margin-bottom: 5px; /* Espacio entre campos */
     border: 1px solid #ddd;
-    border-radius: 4px; /* Esquinas redondeadas */
+    border-radius: 4px; 
 }
 /* Estilo para botones */
 button1 {
-    background-color: #7c7c7c; /* Color de fondo */
+    background-color: #c5c5c5; /* Color de fondo */
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    border-radius: 5px; /* Esquinas redondeadas */
+    border-radius: 5px;
     font-size: 16px;
-    position: bottom;
 }
 button:hover {
-    background-color: #4e4e4e; /* Color más oscuro al pasar el ratón */
+    background-color: #5a1818; /* Color más oscuro al pasar el ratón */
 }
