@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-    <script> src ="varios.js"</script>
-<script>
-  function redireccionar() {
-    event.preventDefault(); 
-    window.location.href = "encargoenviado.html"; 
-  }
-</script>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Encargue una Impresión</title>
@@ -16,6 +9,7 @@
 </head>
 <body>
     <h1>Encargar una Impresión</h1>
+    <div class="containers">
     <div class="container1">
         <h2>Tipo de Impresión</h2>
         <form id="empezarencargue">
@@ -28,7 +22,7 @@
                 <input type="text" id="size" >
             </div>
             <div>
-            <label for="Papel">Tipo de Papel:</label>
+            <label for="papel">Tipo de Papel:</label>
                 <input type="text" id="papel" >
             </div>
             <div>
@@ -41,22 +35,28 @@
         <h3>Datos de Envio</h3>
             <div>
                 <label for="email">Email:</label>
-                <input type="email" id="email" >
+                <input type="email" id="email">
             </div>
             <div>
                 <label for="telefono">Telefono:</label>
                 <input type="tel" id="telefono" name="telefono">
             </div>
             <div>
-            <label for="Domicilio">Domicilio:</label>
-                <input type="text" id="ubicacion" >
+            <label for="domicilio">Domicilio:</label>
+                <input type="text" id="domicilio">
             </div>
             <div>
             <label for="codigopostal">Codigo Postal:</label>
-                <input type="text" id="codigopostal" >
+                <input type="text" id="codigopostal">
             </div>
         </form>
     </div>
+    <button type="submit" onclick="redireccionar()">Enviar</button>
+    <script>
+        function redireccionar() {
+          event.preventDefault(); 
+          window.location.href = "encargoenviado.html"; 
+        }
+      </script>
 </body>
-<button1 type="submit"> Enviar </button>
 </html>

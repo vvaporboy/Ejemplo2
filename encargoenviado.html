@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
     <title>Encargue Enviado!</title>
@@ -11,8 +11,14 @@
 <body>
     <div class="container3">
         <h1>¡Muchas Gracias!</h1>
-        <p>Has iniciado sesión correctamente.</p>
-        <button onclick="volver()">Volver a inicio</button>
+        <p>Su encargo a sido enviado a nuestro mail correctamente!.</p>
+        <button onclick="redireccionar()">Volver a inicio</button>
+        <script>
+            function redireccionar() {
+              event.preventDefault(); 
+              window.location.href = "encargarimpresion.html"; 
+            }
+          </script>
     </div>
 </body>
 </html>

@@ -2,72 +2,64 @@ body {
     font-family: Arial, sans-serif;
     background-color: #e9e9e9;
     color: #333;
-    margin: 10;
+    margin: 20;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
-.container1 {
+.containers { 
+    display: flex; 
+    justify-content: space-around; 
+    margin: 20px; 
+    max-width: 1200px;
+}    
+.container1, .container2 {
     background-color: white;
+    margin: 20px;
     padding: 20px;
     border-radius: 8px; /* Esquinas redondeadas */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    width:500px; /* Ancho fijo para la caja */
-    text-align: start; /* Centrar texto */
-    position: top;
-}
-.container2 {
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    border-radius: 8px; /* Esquinas redondeadas */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    width:800px; /* Ancho fijo para la caja */
-    text-align: start; /* Centrar texto */
-    position: bottom;
+    max-width: 600px; /* Ancho fijo para la caja */
 }
 /* Encabezados */
-h1 {
+h1, h2, h3 {
     color: #202020;
-    padding: 20px;
-    margin-bottom: 800px; /* Espacio debajo del título */
-    text-align: start; /* Centrar texto */
-}
-h2 {
-    color: #202020;
-    padding: 20px;
-    margin-bottom: 50px; /* Espacio debajo del título */
+    padding: 10px;
+    margin-bottom: 10px; /* Espacio debajo del título */
     text-align: center; /* Centrar texto */
 }
-h3 {
-    color: #202020;
-    padding: 20px;
-    margin-bottom: 50px; /* Espacio debajo del título */
-    text-align: center; /* Centrar texto */
+form { 
+    display: flex; 
+    flex-direction: column; 
+} 
+form div { 
+    margin-bottom: 15px
+
 }
-/* Estilo para las etiquetas y entradas */
 label {
     display: flex; /* Asegura que cada etiqueta ocupe una línea */
-    margin: 20px 0 5px; /* Espaciado */
+    margin: 10px 0 5px; /* Espaciado */
+    font-weight: bold;
 }
 input {
-    width: 80%; /* Ancho completo */
+    width: 100%; /* Ancho completo */
     padding: 10px;
     margin-bottom: 5px; /* Espacio entre campos */
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 4px; 
+    box-sizing: border-box;
 }
 /* Estilo para botones */
 button1 {
+    display: block;
     background-color: #c5c5c5; /* Color de fondo */
     color: white;
     border: none;
-    padding: 10px;
+    margin: 20px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
+    text-align: center;
 }
 button:hover {
-    background-color: #5a1818; /* Color más oscuro al pasar el ratón */
+    background-color: #a5a5a5;
 }
