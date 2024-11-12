@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 
 // Ruta para servir el archivo logueo.html
 app.get('/inicio', (req, res) => {
-  res.sendFile(path.join(__dirname,'logueo.html'));  // Asegúrate de que 'logueo.html' esté dentro de 'public'
+  res.sendFile(path.join(__dirname,'encargarimpresion.html'));  // Asegúrate de que 'logueo.html' esté dentro de 'public'
 });
 
 // Iniciar el servidor
