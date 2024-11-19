@@ -30,3 +30,42 @@ function enviarDatos(event) {
     alert('Datos enviados correctamente para el email: ' + email); // Muestra msj en navegador 
 
     }
+ // Enviar los datos al servidor
+ fetch('/encargarimpresion', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json', // Asegúrate de que es JSON
+    },
+    body: JSON.stringify(data), // Convertir el objeto en una cadena JSON
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Credenciales incorrectas');
+    }
+    return response.text();
+})
+.then(data => {
+    window.location.href = '/bienvenido';
+})
+.catch(error => {
+    mostrarErrorModal(error.message);
+});
+
+// Función para mostrar el modal con el error
+function mostrarErrorModal(mensaje) {
+const modal = document.getElementById('miModal');
+const modalMessage = document.getElementById('modal-message');
+modalMessage.textContent = mensaje;
+modal.style.display = 'block'; // Mostrar el modal
+}
+
+// Función para cerrar el modal
+function cerrarModal() {
+const modal = document.getElementById('miModal');
+modal.style.display = 'none'; // Ocultar el modal
+}
+
+
+function volver() {
+window.history.back();
+}
