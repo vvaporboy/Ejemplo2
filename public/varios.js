@@ -45,7 +45,7 @@ function enviarDatos(event) {
     return response.text();
 })
 .then(data => {
-    window.location.href = '/bienvenido';
+    window.location.href = '/cambiar esto';
 })
 .catch(error => {
     mostrarErrorModal(error.message);

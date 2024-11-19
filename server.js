@@ -19,18 +19,18 @@ app.get('/inicio', (req, res) => {
 });
 // Manejar la solicitud POST para /logueo
 app.post('/encargarimpresion', (req, res) => {
-  const { email, password } = req.body;
+  const { archivo, size, papel, cantidad, email, telefono, domicilio, codigopostal } = req.body;
 
   //acá vamos a agregar una llamada a la BD
   if (email === 'usuario@example.com' && password === 'password123') {
       res.json({ message: '¡Bienvenido!' });
   } else {
-      res.status(401).json({ message: 'Credenciales incorrectas' });
+      res.status(401).json({ message: 'Falta llenar campos vacíos' });
   }
 });
 
-app.get('/bienvenido', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'bienvenido.html'));
+app.get('/encargoenviado', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'encargoenviado.html'));
 });
 
 // Iniciar el servidor
