@@ -10,8 +10,7 @@ function iniciarFormulario() {
 
 function enviarDatos(event) {
     event.preventDefault(); // Evita el envío del formulario
-    window.location.href = 'encargoenviado.html';
-
+   
     // valores del formulario
     const archivo = document.getElementById('archivo').value;
     const size = document.getElementById('size').value;
@@ -29,6 +28,9 @@ function enviarDatos(event) {
     console.log('Datos enviados correctamente'); // imprime en consola, se ve apretando f12 en el navegador y yendo a consola
     alert('Datos enviados correctamente para el email: ' + email); // Muestra msj en navegador 
 
+    }
+    function submit(){
+    window.location.href = 'encargoenviado.html';
     }
  // Enviar los datos al servidor
  fetch('/encargarimpresion', {
@@ -67,5 +69,5 @@ modal.style.display = 'none'; // Ocultar el modal
 
 
 function volver() {
-window.history.back();
+window.location.href = 'encargarimpresion.html';
 }
