@@ -26,7 +26,7 @@ function enviarDatos(event) {
 
     // respuesta exitosa
     console.log('Datos enviados correctamente'); // imprime en consola, se ve apretando f12 en el navegador y yendo a consola
-    alert('Datos enviados correctamente para el email: ' + email); // Muestra msj en navegador 
+    alert('Datos enviados correctamente para el email: '); // Muestra msj en navegador 
 
     }
     function submit(){
