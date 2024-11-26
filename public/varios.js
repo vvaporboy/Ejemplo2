@@ -2,16 +2,16 @@
 // funcion para escuchar un evento
 function iniciarFormulario() {
     const form = document.getElementById('empezarencargue');
-    if (form) {
+    const form2 = document.getElementById('empezarencargue2');
+    if (form && form2) {
         form.addEventListener('submit', enviarDatos);
     }
 }
 //funcion para enviar datos
-
 function enviarDatos(event) {
     event.preventDefault(); // Evita el envío del formulario
-   
-    // valores del formulario
+
+    // Capturar valores del formulario
     const archivo = document.getElementById('archivo').value;
     const size = document.getElementById('size').value;
     const papel = document.getElementById('papel').value;
@@ -20,38 +20,38 @@ function enviarDatos(event) {
     const telefono = document.getElementById('telefono').value;
     const domicilio = document.getElementById('domicilio').value;
     const codigopostal = document.getElementById('codigopostal').value;
-    // objeto con los datos
+
+    // Crear un objeto con los datos
     const data = { archivo, size, papel, cantidad, email, telefono, domicilio, codigopostal };
+
+    // Imprimir los datos en consola 
     console.log(data);
 
-    // respuesta exitosa
-    console.log('Datos enviados correctamente'); // imprime en consola, se ve apretando f12 en el navegador y yendo a consola
-    alert('Datos enviados correctamente para el email: '); // Muestra msj en navegador 
+    // Enviar los datos al servidor
+    fetch('/encargarimpresion', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json', // Asegúrate de que es JSON
+        },
+        body: JSON.stringify(data), // Convertir el objeto en una cadena JSON
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Hubo un error al enviar los datos');
+        }
+        return response.text();
+    })
+    .then(data => {
+        console.log(data); // Puedes ver la respuesta del servidor aquí (si hay alguna)
+        alert('Datos enviados correctamente para el email: ' + email); // Mensaje con el email
+        window.location.href = '/encargoenviado'; // Redirigir a otra página
+    })
+    .catch(error => {
+        console.error(error);
+        alert('Error al enviar los datos: ' + error.message); // Mostrar el error en caso de fallo
+    });
+}
 
-    }
-    function submit(){
-    window.location.href = 'encargoenviado.html';
-    }
- // Enviar los datos al servidor
- fetch('/encargarimpresion', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json', // Asegúrate de que es JSON
-    },
-    body: JSON.stringify(data), // Convertir el objeto en una cadena JSON
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error('Credenciales incorrectas');
-    }
-    return response.text();
-})
-.then(data => {
-    window.location.href = '/encargoenviado';
-})
-.catch(error => {
-    mostrarErrorModal(error.message);
-});
 
 // Función para mostrar el modal con el error
 function mostrarErrorModal(mensaje) {

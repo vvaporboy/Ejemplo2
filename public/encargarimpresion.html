@@ -12,7 +12,7 @@
     <div class="containers">
     <div class="container1">
         <h2>Tipo de Impresión</h2>
-        <form id="empezarencargue">
+        <form id="empezarencargue" onclick="iniciarFormulario()">
             <div> 
                 <label for="archivo">Adjuntar Archivo:</label>
                 <input type="file" id="archivo" >
@@ -32,7 +32,8 @@
         </form>
     </div>
     <div class="container2">
-        <h3>Datos de Envio</h3>
+        <form id ="empezarencargue2" onclick="iniciarFormulario()">
+         <h3>Datos de Envio</h3>
             <div>
                 <label for="email">Email:</label>
                 <input type="email" id="email">
@@ -52,13 +53,8 @@
         </form>
     </div>
     </div>
-    <button type="submit" onclick="redireccionar()">Enviar</button>
-    <script>
-        function redireccionar() {
-          event.preventDefault(); 
-          window.location.href = "encargoenviado.html"; 
-        }
-      </script>
+        <!-- cambios de metodos para enviar al servidor -->
+    <button type="submit">Enviar</button>
 
 <div id="miModal" class="modal">
     <div class="modal-content">
